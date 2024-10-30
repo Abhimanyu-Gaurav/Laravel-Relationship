@@ -9,6 +9,6 @@ class SellerController extends Controller
 {
     //
     function list(){
-        return Seller::all();
+        return Seller::find(3);
     }
 }
