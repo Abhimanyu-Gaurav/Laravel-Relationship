@@ -9,3 +9,5 @@ Route::get('/', function () {
 
 
 Route::get('list', [SellerController::class, 'list']);
+
+Route::get('manyRel', [SellerController::class,'manyRel']);

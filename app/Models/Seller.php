@@ -10,4 +10,8 @@ class Seller extends Model
     function productData(){
         return $this->hasOne('App\Models\Product'); # one to one relationship
     }
+
+    function productManyData(){
+        return $this->hasMany('App\Models\Product'); # one to many relationship.
+    }
 }

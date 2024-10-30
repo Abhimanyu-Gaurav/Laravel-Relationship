@@ -11,4 +11,9 @@ class SellerController extends Controller
     function list(){
         return Seller::find(3)->productData ; #Here i use productData() as property
     }
+
+    function manyRel(){
+        return Seller::find(3)->productManyData; # calling the function, & Here i use productData() as property
+    }
+    
 }
