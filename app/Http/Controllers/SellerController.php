@@ -18,7 +18,9 @@ class SellerController extends Controller
     }
 
     function manyToOne(){
-        return Product::all(); 
+        // return Product::all(); 
+        $data = Product::with("Seller")->get();
+        return $data;
     }
     
 }
