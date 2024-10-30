@@ -14,4 +14,10 @@ class Seller extends Model
     function productManyData(){
         return $this->hasMany('App\Models\Product'); # one to many relationship.
     }
+
+    public function products()
+    {
+        return $this->belongsToMany('App\Models\Product', 'product_seller', 'seller_id', 'product_id');
+    }
+
 }

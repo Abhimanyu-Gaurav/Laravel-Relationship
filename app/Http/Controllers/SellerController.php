@@ -22,5 +22,18 @@ class SellerController extends Controller
         $data = Product::with("Seller")->get();
         return $data;
     }
-    
+
+    public function sellerProducts($sellerId)
+    {
+        $seller = Seller::find($sellerId);
+        return $seller->products;  // This will fetch all products linked to the seller
+    }
+
+    public function productSellers($productId)
+    {
+        $product = Product::find($productId);
+        return $product->sellers;  // This will fetch all sellers linked to the product
+    }
+
+        
 }
