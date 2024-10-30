@@ -7,4 +7,7 @@ use Illuminate\Http\Request;
 class SellerController extends Controller
 {
     //
+    function list(){
+        return view("list");
+    }
 }
