@@ -11,3 +11,5 @@ Route::get('/', function () {
 Route::get('list', [SellerController::class, 'list']);
 
 Route::get('manyRel', [SellerController::class,'manyRel']);
+
+Route::get('manyToOne', [SellerController::class,'manyToOne']);
