@@ -9,6 +9,6 @@ class SellerController extends Controller
 {
     //
     function list(){
-        return Seller::find(3);
+        return Seller::find(3)->productData ; #Here i use productData() as property
     }
 }
