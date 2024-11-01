@@ -20,4 +20,11 @@ class Seller extends Model
         return $this->belongsToMany('App\Models\Product', 'product_seller', 'seller_id', 'product_id');
     }
 
+
+    # profile:
+    public function profile()
+    {
+        return $this->hasOne('App\Models\Profile'); // One seller has one profile
+    }
+
 }
