@@ -13,7 +13,8 @@ return new class extends Migration
     {
         Schema::create('profiles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('seller_id')->unique(); // Foreign key and unique
+            // $table->unsignedBigInteger('seller_id')->unique(); // Foreign key and unique for one to one
+            $table->unsignedBigInteger('seller_id'); // Foreign key (not unique for one-to-many)
             $table->string('bio')->nullable(); // Example profile field
             $table->timestamps();
 

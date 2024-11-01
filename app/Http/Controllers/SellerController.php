@@ -35,5 +35,12 @@ class SellerController extends Controller
         return $product->sellers;  // This will fetch all sellers linked to the product
     }
 
+    # Inverse Relationship:
+        # One to Many:
+    public function showProfiles($id){
+        $seller = seller::with( "profiles")->findOrFail($id); // Eager load profiles
+        return view('sellers.show', compact('seller')); // Pass to view
+    }
+
         
 }

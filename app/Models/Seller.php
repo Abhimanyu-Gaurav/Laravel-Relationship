@@ -27,4 +27,8 @@ class Seller extends Model
         return $this->hasOne('App\Models\Profile'); // One seller has one profile
     }
 
+    public function Profiles(){
+        return $this->hasMany('App\Models\Profile'); // A seller can have many profiles
+    }
+
 }

@@ -23,3 +23,6 @@ Route::get('product-sellers/{id}', [SellerController::class,'productSellers']);
 
 # Inverse Relationship:
 Route::get('profiles/{id}', [ProfileController::class,'show']);
+
+Route::get('sellers/{id}/profiles', [SellerController::class,'showProfiles']); # one to many
+
